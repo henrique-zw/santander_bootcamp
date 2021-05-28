@@ -6,6 +6,9 @@ import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonFormatTypes;
+
 import org.apache.catalina.webresources.VirtualResource;
 
 public class StockDTO {
@@ -21,10 +24,11 @@ public class StockDTO {
     private Double price;
     
     @NotNull
-    @Digits(integer = 3, fraction = 2)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     private LocalDate date;
     
     @NotNull
+    @Digits(integer = 3, fraction = 2)
     private Double variation;
 
     public Long getId(){
