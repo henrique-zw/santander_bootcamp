@@ -2,6 +2,8 @@ package com.project.bootcamp.model.dto;
 
 import java.time.LocalDate;
 
+import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
 
 import org.apache.catalina.webresources.VirtualResource;
@@ -14,9 +16,12 @@ public class StockDTO {
     private String name;
     
     @NotNull
+    @DecimalMin(value = "0.00")
+    @Digits(integer = 6, fraction = 2)
     private Double price;
     
     @NotNull
+    @Digits(integer = 3, fraction = 2)
     private LocalDate date;
     
     @NotNull
