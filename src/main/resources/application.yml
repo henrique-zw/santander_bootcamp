@@ -2,3 +2,13 @@ server:
   port: 8080
   servlet:
     context-path: /bootcamp
+spring:
+  datasouce:
+  driver-class-name: org.postgresql.Driver
+  url: jdbc:postgressql://localhost:5432/postgres
+jpa:
+  show-sql: true
+  database-platform: org.hibernate.dialect.PostgreSQLDialect
+  generate-ddl: true
+  hibernate:
+    ddl-aute: none
