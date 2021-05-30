@@ -7,9 +7,7 @@ import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonFormatTypes;
 
-import org.apache.catalina.webresources.VirtualResource;
 
 public class StockDTO {
     
