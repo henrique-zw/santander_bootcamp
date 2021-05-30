@@ -1,8 +1,5 @@
 package com.project.bootcamp.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-
 import java.time.LocalDate;
 
 import javax.persistence.Column;
@@ -14,9 +11,9 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_stock")
-public class Stock{
-    
-    @Id
+public class Stock {
+
+	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
 	private Long id;
@@ -72,4 +69,5 @@ public class Stock{
 	public void setDate(LocalDate date) {
 		this.date = date;
 	}
+
 }
